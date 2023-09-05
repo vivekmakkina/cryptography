@@ -1,0 +1,35 @@
+// S-DES Key Generation
+void generateSubkeys(key) {
+    // Implementation for generating subkeys
+}
+
+// S-DES Encryption
+void encryptSDES(plaintext, subkeys, counter) {
+    keystream = encryptSDES(counter, subkeys);
+    ciphertext = plaintext XOR keystream;
+}
+
+// S-DES Decryption
+void decryptSDES(ciphertext, subkeys, counter) {
+    keystream = encryptSDES(counter, subkeys);
+    plaintext = ciphertext XOR keystream;
+}
+
+// Main function
+int main() {
+    // S-DES Key Generation
+    subkeys = generateSubkeys(key);
+
+    // Counter initialization
+    counter = 0;
+
+    // Test data
+    plaintext = ... // Binary plaintext
+    ciphertext = ... // Binary ciphertext
+
+    // Encrypt and Decrypt in Counter Mode
+    encryptSDES(plaintext, subkeys, counter);
+    decryptSDES(ciphertext, subkeys, counter);
+
+    return 0;
+}
